@@ -1,11 +1,41 @@
-import List from "../list/list"
+import { useDispatch } from "react-redux";
+import { deleteBook, toggleFavorite } from "../../redux/books/actionCreators";
 
-const ListItems= () => { 
-    return(
-        <div>
+const ListItems = ({ book }) => {
+  const dispatch = useDispatch();
+  const handleDeleteBook = (id) => {
+    dispatch(deleteBook(id));
+  };
+  const handleToggleFavorite = (id) => {
+    dispatch(toggleFavorite(id));
+  };
 
-        </div>
-    )
- }
+  return (
+    <li className="flex justify-between items-center p-4 border-b border-gray-300">
+      <div>
+        <h3> Title:{book.title} </h3>
+        <p> Author:{book.author}</p>
+      </div>
+      <div className="flex gap-2">
+        <button
+          onClick={() => handleDeleteBook(book.id)}
+          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors duration-300"
+        >
+          x
+        </button>
+        <button
+          onClick={() => handleToggleFavorite(book.id)}
+          className={`${
+            book.isFavorite
+              ? "bg-amber-500 hover:bg-amber-400"
+              : "bg-gray-400 hover:bg-gray-500"
+          } text-white px-4 py-2 rounded-md transition-colors duration-300`}
+        >
+          fav
+        </button>
+      </div>
+    </li>
+  );
+};
 
- export default ListItems
+export default ListItems;
