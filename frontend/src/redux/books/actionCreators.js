@@ -1,25 +1,20 @@
+import * as actionTypes from "./actionTypes";
 
-
-import * as actionTypes from './actionTypes';
-
-export const addBook = (newBook) =>{
- return{
+export const addBook = (newBook) => {
+  return {
     type: actionTypes.ADD_BOOK,
-    payload:newBook
-    }
-
-}
-export const deleteBook = (id) =>{
- return{
+    payload: newBook,
+  };
+};
+export const deleteBook = (id) => {
+  return {
     type: actionTypes.DELETE_BOOK,
-    payload:id
-    }
-
-}
-export const toggleFavorite = (id) =>{
- return{
-    type: actionTypes.TOOGLE_FAVORITE,
-    payload:id
-    }
-
-}
+    payload: id,
+  };
+};
+export const toggleFavorite = (id) => {
+  return {
+    type: actionTypes.TOGGLE_FAVORITE,
+    payload: id,
+  };
+};

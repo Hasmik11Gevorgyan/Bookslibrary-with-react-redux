@@ -27,7 +27,7 @@ const Form = () => {
     const rndBookkWithId = {
       ...rndBook,
       id: uuidv4(),
-      isFavorite: false
+      isFavorite: false,
     };
     dispatch(addBook(rndBookkWithId));
   };
@@ -55,30 +55,32 @@ const Form = () => {
             className="w-full px-4 py-2 mb-4 border border-gray-400 rounded-md"
           />
         </div>
-        <div className="flex gap-2 max-md: flex-wrap">
-          <button
-            type="submit"
-            className=" bg-blue-500 text-white px-4 py-2 rounded-md transition-colors duration-300 hover:bg-[#4b4b85af]"
-          >
-            Add a new book
-          </button>
-        </div>
-        <div>
-          <button
-            onClick={handleRandomBook}
-            type="button"
-            className=" bg-green-500 text-white px-4 py-2 mt-1 rounded-md transition-colors duration-300 hover:bg-[#4b4b85af]"
-          >
-            Random book
-          </button>
-        </div>
-        <div>
-          <button
-            type="button"
-            className=" bg-blue-500 text-white px-4 py-2 mt-1  rounded-md transition-colors duration-300 hover:bg-[#4b4b85af]"
-          >
-            Add a new book
-          </button>
+        <div className="flex gap-2 flex-wrap items-center ml-17 max-md:flex-wrap">
+          <div>
+            <button
+              type="submit"
+              className="bg-gradient-to-r from-blue-500 to-indigo-800 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300"
+            >
+              Add a new book
+            </button>
+          </div>
+          <div>
+            <button
+              onClick={handleRandomBook}
+              type="button"
+              className="bg-green-500 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-600 hover:scale-105 hover:shadow-xl transition-all duration-300"
+            >
+              Random book
+            </button>
+          </div>
+          <div>
+            <button
+              type="button"
+              className="bg-yellow-500 text-white px-6 py-2 rounded-full shadow-lg hover:bg-yellow-600 hover:scale-105 hover:shadow-xl transition-all duration-300"
+            >
+              Add a new book
+            </button>
+          </div>
         </div>
       </form>
     </div>

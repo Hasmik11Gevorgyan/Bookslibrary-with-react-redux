@@ -1,82 +1,102 @@
 [
   {
     "title": "To Kill a Mockingbird",
-    "author": "Harper Lee"
+    "author": "Harper Lee",
+    "isFavorite": false
   },
   {
     "title": "1984",
-    "author": "George Orwell"
+    "author": "George Orwell",
+    "isFavorite": false
   },
   {
     "title": "Pride and Prejudice",
-    "author": "Jane Austen"
+    "author": "Jane Austen",
+    "isFavorite": false
   },
   {
     "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald"
+    "author": "F. Scott Fitzgerald",
+    "isFavorite": false
   },
   {
     "title": "Moby-Dick",
-    "author": "Herman Melville"
+    "author": "Herman Melville",
+    "isFavorite": false
   },
   {
     "title": "War and Peace",
-    "author": "Leo Tolstoy"
+    "author": "Leo Tolstoy",
+    "isFavorite": false
   },
   {
     "title": "The Catcher in the Rye",
-    "author": "J.D. Salinger"
+    "author": "J.D. Salinger",
+    "isFavorite": false
   },
   {
     "title": "The Hobbit",
-    "author": "J.R.R. Tolkien"
+    "author": "J.R.R. Tolkien",
+    "isFavorite": false
   },
   {
     "title": "Crime and Punishment",
-    "author": "Fyodor Dostoevsky"
+    "author": "Fyodor Dostoevsky",
+    "isFavorite": false
   },
   {
     "title": "The Brothers Karamazov",
-    "author": "Fyodor Dostoevsky"
+    "author": "Fyodor Dostoevsky",
+    "isFavorite": false
   },
   {
     "title": "Jane Eyre",
-    "author": "Charlotte Brontë"
+    "author": "Charlotte Brontë",
+    "isFavorite": false
   },
   {
     "title": "Brave New World",
-    "author": "Aldous Huxley"
+    "author": "Aldous Huxley",
+    "isFavorite": false
   },
   {
     "title": "Wuthering Heights",
-    "author": "Emily Brontë"
+    "author": "Emily Brontë",
+    "isFavorite": false
   },
   {
     "title": "The Lord of the Rings",
-    "author": "J.R.R. Tolkien"
+    "author": "J.R.R. Tolkien",
+    "isFavorite": false
   },
   {
     "title": "The Alchemist",
-    "author": "Paulo Coelho"
+    "author": "Paulo Coelho",
+    "isFavorite": false
   },
   {
     "title": "The Picture of Dorian Gray",
-    "author": "Oscar Wilde"
+    "author": "Oscar Wilde",
+    "isFavorite": false
   },
   {
     "title": "Les Misérables",
-    "author": "Victor Hugo"
+    "author": "Victor Hugo",
+    "isFavorite": false
   },
   {
     "title": "Frankenstein",
-    "author": "Mary Shelley"
+    "author": "Mary Shelley",
+    "isFavorite": false
   },
   {
     "title": "Dracula",
-    "author": "Bram Stoker"
+    "author": "Bram Stoker",
+    "isFavorite": false
   },
   {
     "title": "The Divine Comedy",
-    "author": "Dante Alighieri"
+    "author": "Dante Alighieri",
+    "isFavorite": false
   }
 ]
