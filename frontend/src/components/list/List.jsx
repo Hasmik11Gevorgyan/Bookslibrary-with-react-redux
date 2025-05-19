@@ -18,11 +18,11 @@ const List = () => {
     return(
         <div className="w-full p-4 m-4 bg-[#f2f2f2] rounded-md shadow-md">
  <h2> Book List</h2>
-<p>{booksByFilteredTitle}</p>
+
  <ul>
-    {!books.length ?
+    {!filteredBooks.length ?
      <p> No books available</p> :
-      books.map(book => <ListItems key={book.id} book={book} />)  
+      booksByFilteredTitle.map(book => <ListItems key={book.id} book={book} />)  
     }
  </ul>
         </div>
