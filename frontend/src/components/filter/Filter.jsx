@@ -6,20 +6,19 @@
  const Filter = () =>{
 
   const dispatch = useDispatch();
-  const {title} = useSelector(selectTitleFilter); 
+  const value  = useSelector( selectTitleFilter); 
 
 
- const handleByTitle = (e) => {
-  dispatch( setTitleFilter(e.target.value))
+ const handleByTitle = (e) => dispatch( setTitleFilter(e.target.value))
  
- }
+ 
 
   return (
     <div className="p-4 m-4 bg-[#f2f2f2] rounded-lg shadow-lg " >
        <div>
         <input
         onChange={e => handleByTitle(e)}
-        value={title}
+        value={value}
         type="text"
         placeholder="Filter by title"
         className="w-full px-4 py-2 border-1 border-color-gray-400  rounded-lg"

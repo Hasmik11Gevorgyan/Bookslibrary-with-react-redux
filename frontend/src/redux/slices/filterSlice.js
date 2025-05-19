@@ -9,7 +9,8 @@ const filteredSlice = createSlice({
     initialState,
     reducers:{
         setTitleFilter:(state,action) =>{
-            return {...state,title:action.payload}
+            //return {...state,title:action.payload}
+            state.title = action.payload
         }
     }
 });
