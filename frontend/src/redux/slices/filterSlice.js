@@ -11,9 +11,10 @@ const filteredSlice = createSlice({
         setTitleFilter:(state,action) =>{
             //return {...state,title:action.payload}
             state.title = action.payload
-        }
-    },
-    resetFilters: ()=> initialState
+        },
+         resetFilters: ()=> initialState
+    }
+   
 });
 
 

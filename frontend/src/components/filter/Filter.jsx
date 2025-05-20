@@ -1,6 +1,6 @@
  import { setTitleFilter, resetFilters, selectTitleFilter } from "../../redux/slices/filterSlice";
  import { useDispatch,useSelector } from "react-redux";
-
+import { useState } from "react";
 
 
  const Filter = () =>{
@@ -17,29 +17,23 @@ const [checked, setChecked] = useState(false);
   return (
     <div className=" flex flex-col p-4 m-4 bg-[#f2f2f2] rounded-lg shadow-lg " >
        <div>
-<div className ="flex items-center gap-2">
-  <label className ="flex items-center">
-    <input
-      type ="checkbox"
-      className ="appearance-none mr-2 cursor-pointer"
-      onChange={e => setChecked(prevState => !prevState)}
-      
-      style ={
-        checked ?{
-clipPath: "polygon(14% 44% 0% 65% 50% 100% 100% 16% 80% 0% 43% 62%)",
-        transformOrigin: "bottom left",
-        appearance: "none",
-        backgroundColor: "red",
-        }:
-        {
-          
-        }
-      }
-        />
-        <span> Only favorite</span>
-  </label>
+<label className="flex items-center cursor-pointer gap-2">
+  <input
+    type="checkbox"
+    checked={checked}
+    onChange={() => setChecked(prev => !prev)}
+    className="hidden peer"
+  />
+  <div className="w-5 h-5 border-2 border-gray-400 rounded peer-checked:bg-red-500 peer-checked:border-red-500 flex items-center justify-center">
+    {checked && (
+      <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+      </svg>
+    )}
+  </div>
+  <span>Only favorite</span>
+</label>
 
-</div>
         <input
         onChange={e => handleByTitle(e)}
         value={value}
