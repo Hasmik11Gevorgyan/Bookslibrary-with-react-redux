@@ -17,8 +17,7 @@ const Form = () => {
       console.log(addBook(book));
 
       dispatch(addBook(book));
-      setTitle("");
-      setAuthor("");
+     
     }
   };
   const handleRandomBook = () => {

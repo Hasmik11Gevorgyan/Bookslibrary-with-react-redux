@@ -1,10 +1,11 @@
-import { selectTitleFilter } from "../../redux/slices/filterSlice"
+import { selectTitleFilter,selectAuthorFilter } from "../../redux/slices/filterSlice"
 import ListItems from "../listItems/listItems"
 import { useSelector } from "react-redux"
 
 const List = () => { 
     const books = useSelector(state => state.books)
     const  booksByFilteredTitle  = useSelector(selectTitleFilter);
+    const booksByFilteredAuthor = useSelector(selectAuthorFilter)
 
     const filteredBooks = books.filter( book => {
         const mathchesTitle = book.title.toLowerCase().includes(booksByFilteredTitle.toLowerCase().title)

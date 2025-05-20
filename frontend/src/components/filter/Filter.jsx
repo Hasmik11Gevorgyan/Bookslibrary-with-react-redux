@@ -1,4 +1,8 @@
- import { setTitleFilter, resetFilters, selectTitleFilter } from "../../redux/slices/filterSlice";
+ import { setTitleFilter,
+          setAuthorFilter,
+          selectAuthorFilter,
+          resetFilters,
+          selectTitleFilter } from "../../redux/slices/filterSlice";
  import { useDispatch,useSelector } from "react-redux";
 import { useState } from "react";
 
@@ -6,11 +10,11 @@ import { useState } from "react";
  const Filter = () =>{
 const [checked, setChecked] = useState(false);
   const dispatch = useDispatch();
-  const value  = useSelector( selectTitleFilter); 
-
+  const stateOfTitle  = useSelector( selectTitleFilter); 
+ const stateOfAuthor = useSelector(selectAuthorFilter);
 
  const handleByTitle = (e) => dispatch( setTitleFilter(e.target.value))
- 
+ const handleByAuthor = (e) => dispatch(setAuthorFilter(e.target.value))
  const handleResetFilters = () => dispatch(resetFilters()) 
  
 
@@ -35,17 +39,17 @@ const [checked, setChecked] = useState(false);
 </label>
 
         <input
-        onChange={e => handleByTitle(e)}
-        value={value}
+        onChange={ handleByTitle}
+        value={stateOfTitle}
         type="text"
         placeholder="Filter by title"
         className="w-full px-4 py-2 border-1 border-color-gray-400  rounded-lg"
         />
-       </div>
+       </div> 
        <div>
         <input
-        onChange={e => handleByAuthor(e)}
-        value={value}
+        onChange={ handleByAuthor}
+        value={stateOfAuthor }
         type="text"
         placeholder="Filter by Author"
         className="w-full px-4 py-2 border-1 border-color-gray-400  rounded-lg"
